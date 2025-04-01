@@ -1,4 +1,4 @@
-#include "projeto.h"
+#include "Projeto.h"  //nome do arquivo estava escrito errado
 #include "stdio.h"
 #include "string.h"
 
