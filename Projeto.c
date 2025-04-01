@@ -1,6 +1,6 @@
 #include "Projeto.h"  //nome do arquivo estava escrito errado
-#include "stdio.h"
-#include "string.h"
+#include <stdio.h>    //para incluir bibliotecas ultiliza-se <>
+#include <string.h>   //para incluir bibliotecas ultiliza-se <>
 
 int criarTarefa(ListaDeTarefas *lt){
     if(lt->qtd >= TOTAL_TAREFAS)
