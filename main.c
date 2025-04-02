@@ -1,4 +1,4 @@
-#include "projeto.h"
+#include "Projeto.h"  //nome do arquuivo estava escrito errado
 #include "stdio.h"
 
 int main(){
