@@ -46,7 +46,7 @@ if(codigo != 0)  //o codigo de erro é diferente de 0, não igual
 printf("Erro ao salvar tarefas em arquivo");
 
 
-system ("pause");
+//remoção de system("pause")
 return 0;  //faltou o return 0 da funçao main
 
 }
