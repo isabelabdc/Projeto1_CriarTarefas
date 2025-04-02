@@ -28,7 +28,7 @@ else if(opcao == 2){
     codigo=deletarTarefa(&lt);
     if (codigo ==1 )
     printf("erro ao deletar tarefa: nao existem tarefas para deletar\n");
-else if(codigo ==2)
+    else if(codigo ==2)
     printf("erro ao deletar tarefa: posicao invalida\n");
 }
 else if(opcao == 3){
@@ -36,6 +36,14 @@ else if(opcao == 3){
    if (codigo ==1)   //o código de erro é 1 e não 2
    printf("Erro ao listar tarefas: nao existem tarefas para serem listadas");
 }
+else if (opcao == 4) {
+    codigo = editarTarefa(&lt);
+    if (codigo == 1)
+        printf("Erro ao editar tarefa: Nenhuma tarefa disponível.\n");
+    else if (codigo == 2)
+        printf("Erro ao editar tarefa: Posição inválida.\n");
+}
+
 else {
 	printf("opcao invalida\n");
 }
