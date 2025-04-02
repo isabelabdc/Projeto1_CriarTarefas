@@ -44,6 +44,12 @@ else if (opcao == 4) {
         printf("Erro ao editar tarefa: Posição invalida.\n");
 }
 
+else if (opcao == 5) {
+    codigo = filtrarTarefas(&lt);
+    if (codigo == 1)
+        printf("Erro ao filtrar tarefas: Nenhuma tarefa disponivel.\n");
+}
+
 else {
 	printf("opcao invalida\n");
 }

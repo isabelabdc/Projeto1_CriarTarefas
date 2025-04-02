@@ -118,8 +118,7 @@ int editarTarefa(ListaDeTarefas *lt) {
 //nova função: filtrarTarefas
 int filtrarTarefas(ListaDeTarefas *lt) {
     if (lt->qtd == 0) {
-        printf("Erro: Nao ha tarefas para filtrar.\n");
-        return;
+        return 1;
     }
 
     int opcao;
