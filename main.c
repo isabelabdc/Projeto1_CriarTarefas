@@ -42,7 +42,7 @@ else {
 }while (opcao != 0);
 
 codigo=salvarTarefas(&lt,arquivo);
-if(codigo ==0)
+if(codigo != 0)  //o codigo de erro é diferente de 0, não igual
 printf("Erro ao salvar tarefas em arquivo");
 
 
