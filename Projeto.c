@@ -88,17 +88,17 @@ int editarTarefa(ListaDeTarefas *lt) {
 
     //retorna 2 caso a posição for inválida
     int pos;
-    printf("Digite a posição da tarefa que deseja editar: ");
+    printf("Digite a posicao da tarefa que deseja editar: ");
     scanf("%d", &pos);
 
     if (pos < 0 || pos >= lt->qtd) {
-        printf("Erro: Posição inválida.\n");
+        printf("Erro: Posicao invalida.\n");
         return 2;
     }
 
     Tarefa *t = &lt->tarefas[pos];
 
-    printf("Editando tarefa na posição %d:\n", pos);
+    printf("Editando tarefa na posicaoo %d:\n", pos);
     printf("Prioridade atual: %d\n", t->prioridade);
     printf("Nova prioridade: ");
     scanf("%d", &t->prioridade);
@@ -107,8 +107,8 @@ int editarTarefa(ListaDeTarefas *lt) {
     printf("Nova categoria: ");
     scanf(" %[^\n]", t->categoria);
 
-    printf("Descrição atual: %s\n", t->descricao);
-    printf("Nova descrição: ");
+    printf("Descricaoo atual: %s\n", t->descricao);
+    printf("Nova descricao: ");
     scanf(" %[^\n]", t->descricao); 
 
     return 0;

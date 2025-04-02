@@ -39,9 +39,9 @@ else if(opcao == 3){
 else if (opcao == 4) {
     codigo = editarTarefa(&lt);
     if (codigo == 1)
-        printf("Erro ao editar tarefa: Nenhuma tarefa disponível.\n");
+        printf("Erro ao editar tarefa: Nenhuma tarefa disponivel.\n");
     else if (codigo == 2)
-        printf("Erro ao editar tarefa: Posição inválida.\n");
+        printf("Erro ao editar tarefa: Posição invalida.\n");
 }
 
 else {
