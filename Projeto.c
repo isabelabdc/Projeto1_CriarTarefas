@@ -12,10 +12,10 @@ int criarTarefa(ListaDeTarefas *lt){
     scanf("%d", &t->prioridade);
 
     printf("Entre com a categoria da tarefa: ");
-    scanf("%s[^\n]", t->categoria);    //permite o uso de espaços na categoria
+    scanf("%100s[^\n]", t->categoria);    //adiciona limite de caracteres e permite o uso de espaços na categoria
 
     printf("Entre com a descricao da tarefa: ");
-    scanf("%s[^\n]", t->descricao);    //permite o uso de espaços na descricao
+    scanf("%300s[^\n]", t->descricao);    //adiciona limite de caracteres e permite o uso de espaços na descricao
 
     lt->qtd++;
 
