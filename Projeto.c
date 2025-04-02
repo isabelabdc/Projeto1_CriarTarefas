@@ -78,11 +78,48 @@ int salvarTarefas(ListaDeTarefas *lt, char *nome){
    return 0;
 }
 
+//nova função - editarTarefa
+int editarTarefa(ListaDeTarefas *lt) {
+    //retorna 1 caso não haja tarefas na lista
+    if (lt->qtd == 0) {
+        printf("Erro: Não há tarefas para editar.\n");
+        return 1;
+    }
+
+    //retorna 2 caso a posição for inválida
+    int pos;
+    printf("Digite a posição da tarefa que deseja editar: ");
+    scanf("%d", &pos);
+
+    if (pos < 0 || pos >= lt->qtd) {
+        printf("Erro: Posição inválida.\n");
+        return 2;
+    }
+
+    Tarefa *t = &lt->tarefas[pos];
+
+    printf("Editando tarefa na posição %d:\n", pos);
+    printf("Prioridade atual: %d\n", t->prioridade);
+    printf("Nova prioridade: ");
+    scanf("%d", &t->prioridade);
+
+    printf("Categoria atual: %s\n", t->categoria);
+    printf("Nova categoria: ");
+    scanf(" %[^\n]", t->categoria);
+
+    printf("Descrição atual: %s\n", t->descricao);
+    printf("Nova descrição: ");
+    scanf(" %[^\n]", t->descricao); 
+
+    return 0;
+}
+
 void exibeMenu(){
     printf("menu\n");
     printf("1. Criar tarefa\n");
     printf("2. Deletar tarefa\n");
 	printf("3. Listar tarefa\n");
+    printf("4. Editar tarefa\n");  //adicionando nova função ao menu
 	printf("0. Sair\n");
 	}
 
