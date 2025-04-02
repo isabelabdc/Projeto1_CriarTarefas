@@ -82,7 +82,7 @@ int salvarTarefas(ListaDeTarefas *lt, char *nome){
 int editarTarefa(ListaDeTarefas *lt) {
     //retorna 1 caso não haja tarefas na lista
     if (lt->qtd == 0) {
-        printf("Erro: Não há tarefas para editar.\n");
+        printf("Erro: Nao ha tarefas para editar.\n");
         return 1;
     }
 
@@ -114,12 +114,68 @@ int editarTarefa(ListaDeTarefas *lt) {
     return 0;
 }
 
+
+//nova função: filtrarTarefas
+int filtrarTarefas(ListaDeTarefas *lt) {
+    if (lt->qtd == 0) {
+        printf("Erro: Nao ha tarefas para filtrar.\n");
+        return;
+    }
+
+    int opcao;
+    printf("Escolha o criterio de filtragem:\n");
+    printf("1. Por Prioridade\n");
+    printf("2. Por Categoria\n");
+    scanf("%d", &opcao);
+
+    if (opcao == 1) {
+        int prioridade;
+        printf("Digite a prioridade desejada: ");
+        scanf("%d", &prioridade);
+
+        printf("\nTarefas com prioridade %d:\n", prioridade);
+        int encontrou = 0;
+        for (int i = 0; i < lt->qtd; i++) {
+            if (lt->tarefas[i].prioridade == prioridade) {
+                printf("Pos: %d \t Categoria: %s\n", i, lt->tarefas[i].categoria);
+                printf("Descricao: %s\n\n", lt->tarefas[i].descricao);
+                encontrou = 1;
+            }
+        }
+
+        if (!encontrou)
+            printf("Nenhuma tarefa encontrada com essa prioridade.\n");
+
+    } else if (opcao == 2) {
+        char categoria[100];
+        printf("Digite a categoria desejada: ");
+        scanf(" %[^\n]", categoria);
+
+        printf("\nTarefas na categoria '%s':\n", categoria);
+        int encontrou = 0;
+        for (int i = 0; i < lt->qtd; i++) {
+            if (strcmp(lt->tarefas[i].categoria, categoria) == 0) {
+                printf("Pos: %d \t Prioridade: %d\n", i, lt->tarefas[i].prioridade);
+                printf("Descricao: %s\n\n", lt->tarefas[i].descricao);
+                encontrou = 1;
+            }
+        }
+
+        if (!encontrou)
+            printf("Nenhuma tarefa encontrada nessa categoria.\n");
+
+    } else {
+        printf("Opcao invalida!\n");
+    }
+}
+
 void exibeMenu(){
     printf("menu\n");
     printf("1. Criar tarefa\n");
     printf("2. Deletar tarefa\n");
 	printf("3. Listar tarefa\n");
-    printf("4. Editar tarefa\n");  //adicionando nova função ao menu
+    printf("4. Editar tarefa\n");  //adicionando editarTarefa ao menu
+    printf("5. Filtrar tarefas\n");    //adicionando filtrarTarefas ao menu
 	printf("0. Sair\n");
 	}
 
