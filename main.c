@@ -10,7 +10,7 @@ int codigo, opcao;
 codigo=carregarTarefas(&lt, arquivo);  //faltou o &
 
 if (codigo !=0){
-printf("Lista de tarefas nao carregada/n");   //faltou pular a linha
+printf("Lista de tarefas nao carregada\n");   //faltou pular a linha
 lt.qtd=0;  //o valor deve ser igual a 0
 }
 
