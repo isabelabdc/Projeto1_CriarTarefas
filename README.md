@@ -8,7 +8,7 @@ PROBLEMAS CORRIGIDOS: --Erros em 'Projeto.h':
 
 ++Linha 12 - Nome da estrutura "ListaDeTarefas" estava sem o "s" no final;
 
-++Linha 18 - "nome" estava com "s" no final;
+++Linha 21 - "nome" estava com "s" no final;
 
 --Erros em 'Projeto.c':
 
@@ -18,15 +18,15 @@ PROBLEMAS CORRIGIDOS: --Erros em 'Projeto.h':
 
 ++Linha 13 - Foi adicionado 'getchar()' para limpar o scanf e corrigir um bug;
 
-++Linhas 15 e 18 - "%s" dentro do scanf foi trocado para "%[^\n]", para permitir o uso de espaços ao escrever a categoria e descrição;
+++Linhas 16 e 19 - "%s" dentro do scanf foi trocado para "%[^\n]", para permitir o uso de espaços ao escrever a categoria e descrição;
 
-++Linha 33 - Utilizou-se o símbolo de menor(<), quando o certo era usar maior(>);
+++Linha 34 - Utilizou-se o símbolo de menor(<), quando o certo era usar maior(>);
 
-++Linha 38 - Mudança de 'categoria' para 'descricao', pois categoria está sendo copiada duas vezes;
+++Linha 39 - Mudança de 'categoria' para 'descricao', pois categoria está sendo copiada duas vezes;
 
-++Linha 60 - Faltou o asterisco(*) depois de char;
+++Linha 61 - Faltou o asterisco(*) depois de char;
 
-++Linha 71 - Faltou o ponto e vírgula(;) no final da linha;
+++Linha 72 - Faltou o ponto e vírgula(;) no final da linha;
 
 --Erros em 'main.c':
 
@@ -42,11 +42,11 @@ PROBLEMAS CORRIGIDOS: --Erros em 'Projeto.h':
 
 ++Linha 36 - O código de erro na função 'listarTarefas' é 1 e não 2;
 
-++Linha 45 - O certo é '!=0' e não '==0', pois 0 é o código de retorno caso não tenha erros, então só se for diferente(!=) de 0, que avisamos ao usuário que tem erros;
+++Linha 68 - O certo é '!=0' e não '==0', pois 0 é o código de retorno caso não tenha erros, então só se for diferente(!=) de 0, que avisamos ao usuário que tem erros;
 
-++Linha 49 - Remoção de 'system("pause")';
+++Linha 72 - Remoção de 'system("pause")';
 
-++Linha 50 - Foi adicionado o return da função main;
+++Linha 73 - Foi adicionado o return da função main;
 
 
 
