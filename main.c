@@ -49,6 +49,15 @@ else if (opcao == 5) {
     if (codigo == 1)
         printf("Erro ao filtrar tarefas: Nenhuma tarefa disponivel.\n");
 }
+else if (opcao == 6) {
+    codigo = duplicarTarefa(&lt);
+    if (codigo == 1)
+        printf("Erro ao duplicar tarefa: Nenhuma tarefa disponivel.\n");
+    else if (codigo == 2)
+        printf("Erro ao duplicar tarefa: Limite de tarefas atingido.\n");
+    else if (codigo == 3)
+        printf("Erro ao duplicar tarefa: Posicao invalida.\n");
+}
 
 else {
 	printf("opcao invalida\n");
