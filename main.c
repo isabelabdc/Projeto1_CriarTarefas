@@ -1,5 +1,5 @@
 #include "Projeto.h"  //nome do arquuivo estava escrito errado
-#include "stdio.h"
+#include <stdio.h>   //para incluir bibliotecas utiliza-se <>
 
 int main(){
 ListaDeTarefas lt;
