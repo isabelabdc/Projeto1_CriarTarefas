@@ -168,6 +168,33 @@ int filtrarTarefas(ListaDeTarefas *lt) {
     }
 }
 
+//nova função - duplicar tarefa
+int duplicarTarefa(ListaDeTarefas *lt) {
+    if (lt->qtd == 0) {
+        return 1;
+    }
+
+    if (lt->qtd >= TOTAL_TAREFAS) {
+        return 2;
+    }
+
+    int pos;
+    printf("Digite a posicao da tarefa que deseja duplicar: ");
+    scanf("%d", &pos);
+
+    if (pos < 0 || pos >= lt->qtd) {
+        return 3;
+    }
+
+    // Copia os dados da tarefa para a próxima posição disponível
+    lt->tarefas[lt->qtd] = lt->tarefas[pos];
+    lt->qtd++;
+
+    printf("Tarefa duplicada para a proxima posicao!\n");
+    return 0;
+}
+
+
 void exibeMenu(){
     printf("menu\n");
     printf("1. Criar tarefa\n");
@@ -175,6 +202,7 @@ void exibeMenu(){
 	printf("3. Listar tarefa\n");
     printf("4. Editar tarefa\n");  //adicionando editarTarefa ao menu
     printf("5. Filtrar tarefas\n");    //adicionando filtrarTarefas ao menu
+    printf("6. Duplicar tarefa\n");   //adicionando duplicarTarefa ao menu
 	printf("0. Sair\n");
 	}
 
