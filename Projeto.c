@@ -68,7 +68,7 @@ int carregarTarefas(ListaDeTarefas *lt, char *nome){  //faltou o asterisco(*) an
 }
 
 int salvarTarefas(ListaDeTarefas *lt, char *nome){
-   FILE *fp=fopen(nome, "wb")
+   FILE *fp=fopen(nome, "wb");  //faltou o ponto e vírgula(;)
    if (fp == NULL)
    return 1;
    
