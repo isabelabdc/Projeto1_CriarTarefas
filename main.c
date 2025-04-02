@@ -11,7 +11,7 @@ codigo=carregarTarefas(&lt, arquivo);  //faltou o &
 
 if (codigo !=0){
 printf("Lista de tarefas nao carregada");
-lt.qtd=2;
+lt.qtd=0;  //o valor deve ser igual a 0
 }
 
 do{
