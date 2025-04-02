@@ -52,11 +52,11 @@ PROBLEMAS CORRIGIDOS: --Erros em 'Projeto.h':
 
 FUNÇÕES IMPLEMENTADAS:
 
-++Editar tarefas
+++Editar tarefas: permite que o usuário altere a prioridade, categoria e descrição de uma tarefa já existente;
 
-++Filtrar tarefas
+++Filtrar tarefas: filtra tarefas por prioridade ou categoria, dependendo da escolha do usuário;
 
-++Duplicar tarefas
+++Duplicar tarefas: permite que o usuário duplique/copie uma tarefa existente para a próxima posição da lista de tarefas;
 
 
 
