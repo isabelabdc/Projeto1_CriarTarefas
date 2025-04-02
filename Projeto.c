@@ -82,7 +82,7 @@ int salvarTarefas(ListaDeTarefas *lt, char *nome){
 int editarTarefa(ListaDeTarefas *lt) {
     //retorna 1 caso não haja tarefas na lista
     if (lt->qtd == 0) {
-        printf("Erro: Não há tarefas para editar.\n");
+        printf("Erro: Nao ha tarefas para editar.\n");
         return 1;
     }
 
@@ -98,7 +98,7 @@ int editarTarefa(ListaDeTarefas *lt) {
 
     Tarefa *t = &lt->tarefas[pos];
 
-    printf("Editando tarefa na posicaoo %d:\n", pos);
+    printf("Editando tarefa na posicao %d:\n", pos);
     printf("Prioridade atual: %d\n", t->prioridade);
     printf("Nova prioridade: ");
     scanf("%d", &t->prioridade);
@@ -113,6 +113,7 @@ int editarTarefa(ListaDeTarefas *lt) {
 
     return 0;
 }
+
 
 void exibeMenu(){
     printf("menu\n");
